@@ -34,13 +34,15 @@
   --bg-white: #fff;
   --bg-light: #f7f9fc;
   --btn-hover-color: #6d7a88;
+
+  --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
 }
 html {
   font-size: 62.5%; /*golden REM value*/
 }
 
 body {
-  background-color: gray;
+  background-color: var(--bg-white);
   font-family: var(--body-font);
   font-size: var(--body-font-size);
   color: var(--text-black);
@@ -229,6 +231,30 @@ p {
   max-width: var(--standard-width);
 }
 
+.card-container {
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: var(--spacing-sm) var(--spacing-md) var(--spacing-sm);
+}
+
+.card .icon {
+  height: 5rem;
+  margin: 0 0 var(--spacing-sm) 0;
+}
+
+.card .card-title {
+  font-size: var(--h6-size);
+  font-family: var(--heading-font);
+  font-weight: 600;
+  margin: 0;
+  width: 100%;
+}
+
 /* NAVBAR */
 
 header {
@@ -298,4 +324,124 @@ main {
 .hero-phone {
   height: 62.8rem;
   transform: translate(3.2rem, -3.2rem);
+}
+
+/* Partners Section */
+
+.partners-grid {
+  display: grid;
+  grid-template-areas:
+    "logo logo logo logo"
+    "logo logo logo logo";
+  margin: var(--spacing-xl) 0;
+  column-gap: var(--spacing-md);
+  row-gap: var(--spacing-lg);
+}
+
+.partners-grid img {
+  height: 6rem;
+  place-self: center;
+}
+
+/* Unified platform */
+
+.unified-platform {
+  padding: var(--spacing-xl) 0;
+}
+
+.unified-platform > h3 {
+  width: 50%;
+  font-weight: 700;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.unified-platform .primary-button {
+  margin: var(--spacing-md) 0;
+  background-color: var(--purple-1);
+}
+
+.unified-platform .primary-button:hover {
+  background-color: var(--primary-accent);
+}
+
+/* GRAPHIC GRID */
+
+.graphic-grid {
+  display: grid;
+  grid-template-areas:
+    "card slack slack"
+    "phone slack slack"
+    "phone dash dash";
+  grid-gap: var(--spacing-lg);
+  padding: var(--spacing-lg) 0;
+}
+
+#card {
+  grid-area: card;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+
+#slack {
+  grid-area: slack;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+#phone {
+  grid-area: phone;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+
+#dash {
+  grid-area: dash;
+  width: 100%;
+  box-shadow: var(--standard-box-shadow);
+}
+
+/* INTEGRATION SECTION */
+.integration-section {
+  margin: var(--spacing-xl) 0 var(--spacing-xl) 0;
+  color: var(--bg-white);
+}
+
+.integration-section > .two-col > .col-left > h2 {
+  font-weight: 700;
+}
+
+.integration-section .card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: var(--spacing-lg) 0;
+}
+
+.integration-section .primary-button {
+  background-color: var(--blue-1);
+  color: var(--text-black);
+}
+
+.integration-section .secondary-button {
+  color: var(--blue-1);
+}
+
+.integration-section .col-right img {
+  width: 100%;
+  padding: var(--spacing-sm);
+  border-radius: 20px;
+}
+
+/* WHY SWIPE */
+
+.why-swipe-section h2 {
+  font-weight: 700;
+  margin: 0 0 var(--spacing-lg) 0;
+}
+
+.why-swipe-section .card-container {
+  display: flex;
+}
+
+.why-swipe-section .secondary-text {
+  color: var(--text-black);
 }
