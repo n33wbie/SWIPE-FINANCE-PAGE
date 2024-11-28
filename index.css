@@ -36,9 +36,17 @@
   --btn-hover-color: #6d7a88;
 
   --standard-box-shadow: 0px 2px 40px rgba(0, 0, 0, 0.15);
+  --primary-gradient: linear-gradient(
+    101.33deg,
+    #08209a 0.76%,
+    #6563ff 33.33%,
+    #36c5f0 76.92%,
+    #83e2ff 96.96%
+  );
 }
 html {
   font-size: 62.5%; /*golden REM value*/
+  width: 100%;
 }
 
 body {
@@ -57,7 +65,8 @@ body {
 }
 
 main {
-  margin: var(--spacing-xl) 0;
+  margin: var(--spacing-xl) 0 0 0;
+  width: 100%;
 }
 
 h1 {
@@ -94,7 +103,7 @@ h4 {
   font-weight: 500;
   margin: 0;
   width: 100%;
-  letter-spacing: 0.25 px;
+  letter-spacing: 0.25px;
 }
 
 h5 {
@@ -231,9 +240,6 @@ p {
   max-width: var(--standard-width);
 }
 
-.card-container {
-}
-
 .card {
   display: flex;
   flex-direction: column;
@@ -298,9 +304,10 @@ header {
 }
 
 /* HERO CONTENT */
-
-main {
-  margin: var(--spacing-xl) 0;
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 .button-container {
   display: flex;
@@ -327,7 +334,11 @@ main {
 }
 
 /* Partners Section */
-
+.partners-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .partners-grid {
   display: grid;
   grid-template-areas:
@@ -344,7 +355,11 @@ main {
 }
 
 /* Unified platform */
-
+.unified-platform-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .unified-platform {
   padding: var(--spacing-xl) 0;
 }
@@ -365,7 +380,11 @@ main {
 }
 
 /* GRAPHIC GRID */
-
+.graphic-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
 .graphic-grid {
   display: grid;
   grid-template-areas:
@@ -401,8 +420,12 @@ main {
 
 /* INTEGRATION SECTION */
 .integration-section {
+  background-color: var(--primary-accent);
   margin: var(--spacing-xl) 0 var(--spacing-xl) 0;
   color: var(--bg-white);
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .integration-section > .two-col > .col-left > h2 {
@@ -433,6 +456,12 @@ main {
 
 /* WHY SWIPE */
 
+.why-swipe-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .why-swipe-section h2 {
   font-weight: 700;
   margin: 0 0 var(--spacing-lg) 0;
@@ -444,4 +473,220 @@ main {
 
 .why-swipe-section .secondary-text {
   color: var(--text-black);
+}
+
+/* GLOBAL SECTION */
+
+.global-section {
+  background-color: var(--primary-accent);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  color: var(--text-light);
+  position: relative;
+  padding: calc(var(--spacing-xl) * 3) 0;
+}
+
+.global-section a {
+  color: var(--blue-1);
+}
+.global-section a:hover {
+  color: var(--text-light);
+}
+
+.global-section .card-container {
+  display: flex;
+  margin: calc(var(--spacing-xl) * 2) 0;
+}
+
+.global-section .card {
+  width: 25%;
+  box-sizing: border-box;
+  padding: 0 var(--spacing-sm) 0 0;
+  margin: 0 var(--spacing-sm) 0 0;
+}
+
+.global-section .card h6 {
+  font-weight: 300;
+  border-left: 2px solid var(--blue-1);
+  padding: 0 0 0 var(--spacing-sm);
+  line-height: 2.8rem;
+}
+
+.globe-image {
+  max-width: 844px;
+  opacity: 25%;
+  position: absolute;
+  top: 11%;
+}
+
+/* VIRTUAL EVENTS */
+
+.virtual-events-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: calc(var(--spacing-xl) * 3) 0;
+}
+
+.virtual-events-section h2 {
+  font-weight: 700;
+}
+.virtual-events-section .primary-button {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0 0 0;
+}
+.virtual-events-section .primary-button:hover {
+  background-color: var(--primary-accent);
+}
+
+.swipe-sessions-card {
+  width: 54rem;
+  height: 44.6rem;
+  box-shadow: var(--standard-box-shadow);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.virtual-events-section .col-left {
+  height: 44.6rem;
+  padding: 0 var(--spacing-xl) 0 0;
+}
+.swipe-sessions-card .card-top {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.swipe-sessions-card .card-top::before {
+  content: "";
+  background: var(--primary-gradient);
+  width: 100%;
+  height: 150%;
+  position: absolute;
+  top: -40%;
+  transform: skewY(-5deg);
+  z-index: -1;
+}
+
+#sessions-logo {
+  width: 33.8rem;
+}
+
+.virtual-events-section .sessions-avatars {
+  position: absolute;
+  bottom: -7rem;
+  left: var(--spacing-xl);
+}
+.virtual-events-section .sessions-avatars img {
+  width: 8rem;
+}
+
+#sessions-avatar-2 {
+  position: absolute;
+  left: var(--spacing-xl);
+}
+
+.virtual-events-section .card-bottom {
+  width: 100%;
+  height: 50%;
+  box-sizing: border-box;
+  padding: var(--spacing-xl);
+}
+
+.virtual-events-section .subtitle {
+  margin: var(--spacing-lg) 0 0 0;
+}
+
+.virtual-events-section .secondary-text {
+  color: var(--text-black);
+  font-weight: 700;
+  width: 50%;
+}
+
+/* GETTING STARTED SECTION */
+
+.getting-started-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 0 0 calc(var(--spacing-xl) * 3) 0;
+}
+
+.getting-started-section .primary-button {
+  background-color: var(--purple-1);
+  margin: var(--spacing-md) 0 0 0;
+}
+
+.getting-started-section .primary-button:hover {
+  background-color: var(--primary-accent);
+}
+
+.getting-started-section .card-container {
+  display: flex;
+  justify-content: center;
+}
+
+.getting-started-section .card button {
+  color: var(--purple-2);
+}
+
+/* FOOTER */
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-light);
+  padding: var(--spacing-xl) 0;
+}
+
+#footer-logo {
+  -maxwidth: 10.8rem;
+  margin: 0 0 var(--spacing-md) 0;
+}
+
+.footer .section-container {
+  display: flex;
+}
+
+.footer .col {
+  width: 25%;
+}
+.footer .col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer .col li {
+  margin: var(--spacing-md) 0;
+}
+.footer .col a {
+  color: var(--text-dark);
+  font-weight: 400;
+  vertical-align: center;
+  display: flex;
+  align-items: center;
+  margin: var(--spacing-sm) 0;
+}
+.footer .col a:hover {
+  color: var(--purple-1);
+  text-decoration: underline;
+}
+.footer .icons-link {
+  display: flex;
+  flex-direction: column;
+  margin: var(--spacing-sm) 0;
+}
+
+.footer .icons-link img {
+  width: 2.4rem;
+  margin: 0 var(--spacing-sm) 0 0;
+}
+
+.footer h3 {
+  font-size: var(--h6-size);
+  font-weight: 700;
 }
